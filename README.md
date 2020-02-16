@@ -5,7 +5,7 @@ Edit it however you see necessary.
 
 ## Features
 
-`Typescript`, `Prettier`, `Jest`, `Tslint`, `GitHub Actions`, `Coveralls`, `SonarQube`.
+`Typescript`, `Prettier`, `Jest`, `Eslint`, `GitHub Actions`, `Coveralls`, `SonarQube`.
 
 **Note**:
 

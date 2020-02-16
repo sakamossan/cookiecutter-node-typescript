@@ -48,7 +48,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts,js}": ["prettier --write", "yarn lint src --fix", "git add"]
+    "*.{ts,js}": ["prettier --write", "yarn lint --fix"]
   },
   "jest-junit": {
     "outputDirectory": "coverage"

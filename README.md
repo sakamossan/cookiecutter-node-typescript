@@ -1,7 +1,6 @@
 # cookiecutter-node-typescript
 
-Boilerplate for TypeScript and Node.js.
-Edit it however you see necessary.
+Cookiecutter for Node.js with Typescript, Eslint, Jest, Prettier, GitHub Actions, Coveralls and SonarQube.
 
 ## Features
 

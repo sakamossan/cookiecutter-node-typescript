@@ -3,37 +3,54 @@
   "description": "{{cookiecutter.repo_description}}",
   "version": "0.0.1",
   "author": "{{cookiecutter.repo_author}}",
+  "main": "dist/index.js",
   "license": "MIT",
-  "private": false,
+  "private": true,
   "scripts": {
-    "start": "node lib/index.js",
+    "start": "node dist/index.js",
     "start:example": "node --no-warnings example/index.js",
-    "build": "tsc",
-    "test": "jest index.test.ts",
-    "system:test": "jest index.system.test.ts",
-    "coverage": "jest --coverage index.test.ts",
-    "system:coverage": "jest --coverage index.system.test.ts",
-    "tslint": "tslint ./src/index.ts",
-    "prettier:base": "prettier",
-    "prettier:check": "yarn run prettier:base --list-different \"src/**/*.{ts,tsx}\"",
-    "prettier:write": "yarn run prettier:base --write \"src/**/*.{ts,tsx}\""
+    "start:dev": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/index.ts",
+    "test": "jest --coverage",
+    "test:dev": "jest --coverage --watchAll",
+    "test:staged": "jest --changedSince=HEAD --passWithNoTests",
+    "test:coverage": "jest --coverage | yarn coveralls",
+    "prettier:check": "prettier --list-different 'src/**/*.{ts,tsx}'",
+    "prettier:write": "prettier --write 'src/**/*.{ts,tsx}'",
+    "build": "rm -rf ./dist && tsc",
+    "lint": "eslint . --ext ts",
+    "clean": "rm -rf ./dist && rm -rf ./node_modules"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.1",
-    "@types/node": "^10.9.2",
-    "coveralls": "^3.0.2",
-    "husky": "^1.0.0-rc.13",
-    "jest": "^23.5.0",
-    "jest-junit": "^5.1.0",
-    "prettier": "^1.14.2",
-    "ts-jest": "^23.1.4",
-    "tslint": "^5.11.0",
-    "tslint-config-prettier": "^1.15.0",
-    "typescript": "^3.0.1"
+    "@types/jest": "^25.1.2",
+    "@types/node": "^13.7.1",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "coveralls": "^3.0.9",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "jest-junit": "^10.0.0",
+    "lint-staged": "^10.0.7",
+    "module-alias": "^2.2.2",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.2.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  },
+  "_moduleAliases": {
+    "@": "./src/"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn build && git add lib/"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{ts,js}": ["prettier --write", "yarn lint src --fix", "git add"]
+  },
+  "jest-junit": {
+    "outputDirectory": "coverage"
   }
 }

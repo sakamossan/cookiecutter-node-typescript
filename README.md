@@ -20,7 +20,7 @@ Cookiecutter for Node.js with Typescript, Eslint, Jest, Prettier, GitHub Actions
 Install cookiecutter:
 
 ```
-$ sudo apt install cookiecutter
+$ pip install --user cookiecutter
 ```
 
 Create a new repo:

@@ -14,7 +14,12 @@
       "jsx": true
     }
   },
-  "ignorePatterns": ["jest.config.js"],
+  "ignorePatterns": [
+    "jest.config.js",
+    "webpack.config.js",
+    "/example",
+    "/dist"
+  ],
   "rules": {
     "@typescript-eslint/no-unused-vars": "error"
   }

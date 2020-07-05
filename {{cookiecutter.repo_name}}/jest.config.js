@@ -13,6 +13,6 @@ module.exports = {
   transformIgnorePatterns: ["<rootDir>/node_modules/(?!@foo)"],
   modulePathIgnorePatterns: ["^.+\\.mock.ts?$"],
   collectCoverageFrom: ["src/**/*.ts"],
-  coverageReporters: ["text-lcov", "lcov", "text"],
+  coverageReporters: ["lcov", "text"],
   reporters: ["default", "jest-junit"],
 };

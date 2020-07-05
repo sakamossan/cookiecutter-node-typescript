@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "target": "es6",
     "module": "commonjs",
     "strict": true,
     "outDir": "dist",
-    "sourceMap": false,
+    "declaration": true,
+    "inlineSourceMap": true,
     "baseUrl": "./src",
     "paths": {
       "@/*": ["*"]

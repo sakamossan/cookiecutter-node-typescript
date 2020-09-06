@@ -1,10 +1,10 @@
 # cookiecutter-node-typescript
 
-Cookiecutter for Node.js with TypeScript, Eslint, Jest, Prettier.
+Cookiecutter for Node.js with TypeScript
 
 ## Features
 
-`TypeScript`, `Prettier`, `Jest`, `Eslint`, `Prettier`.
+`TypeScript`, `Jest`, `Eslint/Prettier`.
 
 ## Installation
 

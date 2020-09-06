@@ -15,6 +15,7 @@ module.exports = {
   },
   "ignorePatterns": [
     "jest.config.js",
+    ".eslintrc.js",
     "/dist"
   ]
 }

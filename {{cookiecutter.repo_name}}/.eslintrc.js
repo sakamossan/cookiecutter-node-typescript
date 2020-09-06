@@ -1,4 +1,7 @@
-{
+/**
+ * @type {import('eslint').ESLint.Options}
+ */
+module.exports = {
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -8,19 +11,10 @@
   "plugins": ["@typescript-eslint"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
+    "sourceType": "module"
   },
   "ignorePatterns": [
     "jest.config.js",
-    "webpack.config.js",
-    "/example",
     "/dist"
-  ],
-  "rules": {
-    "@typescript-eslint/no-unused-vars": "error"
-  }
+  ]
 }

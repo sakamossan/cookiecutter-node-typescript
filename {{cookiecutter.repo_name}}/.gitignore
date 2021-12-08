@@ -1,3 +1,5 @@
+!.envrc
+
 *.swp
 .scannerwork
 node_modules

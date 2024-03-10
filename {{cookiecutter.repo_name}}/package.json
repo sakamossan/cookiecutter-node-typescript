@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "jest": "node --no-warnings=ExperimentalWarning --experimental-vm-modules node_modules/.bin/jest --maxWorkers=1",
-    "test": "run-p jest lint",
+    "test": "run-p tsc jest lint",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint . --ext ts"
   },
   "devDependencies": {

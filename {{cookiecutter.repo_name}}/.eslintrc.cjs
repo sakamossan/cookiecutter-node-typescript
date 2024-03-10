@@ -18,4 +18,7 @@ module.exports = {
     sourceType: "module",
   },
   ignorePatterns: ["jest.config.js", ".eslintrc.js", "/dist"],
+  rules: {
+    "@typescript-eslint/no-explicit-any": "off",
+  },
 };

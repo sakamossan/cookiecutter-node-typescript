@@ -8,6 +8,10 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "prettier",
   ],
+  env: {
+    es2021: true,
+    node: true,
+  },
   plugins: ["@typescript-eslint"],
   parser: "@typescript-eslint/parser",
   parserOptions: {

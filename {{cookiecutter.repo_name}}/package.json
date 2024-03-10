@@ -6,16 +6,16 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "jest": "node --no-warnings=ExperimentalWarning --experimental-vm-modules node_modules/.bin/jest --maxWorkers=1",
-    "test": "run-p tsc jest lint",
+    "test": "run-p typecheck jest lint",
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --ext ts"
   },
   "devDependencies": {
     "@types/jest": "^29.5.5",
     "@types/node": "^18.13.0",
-    "@typescript-eslint/eslint-plugin": "^6.7.5",
-    "@typescript-eslint/parser": "^6.7.5",
-    "eslint": "^8.51.0",
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.0.0",
     "jest": "^29.7.0",
     "npm-run-all2": "^6.1.2",

@@ -1,3 +1,3 @@
 import subprocess
 
-subprocess.call(['yarn', 'install'])
+subprocess.call(['npm', 'install'])
